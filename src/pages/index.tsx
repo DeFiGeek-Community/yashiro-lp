@@ -1,11 +1,11 @@
-import { Box, Grid, GridItem } from '@chakra-ui/react';
+import { Grid, GridItem } from '@chakra-ui/react';
 //import { useWeb3React } from '@web3-react/core';
-import Dashboard from '../components/Dashboard';
-{/*}
-import Infographics from '../components/Infographics';
-import Pledge from '../components/Pledge';
-import Redemption from '../components/Redemption';
-*/}
+import Introduction from '../components/Introduction';
+
+//import Infographics from '../components/Infographics';
+//import Pledge from '../components/Pledge';
+//import Redemption from '../components/Redemption';
+
 import World from '../components/World';
 import Layout from '../components/layout';
 
@@ -69,24 +69,21 @@ export default function Index() {
       )}
         */}
 
-      {(
+      {
         <Grid
           templateColumns="repeat(5, 1fr)"
           gap={8}
           style={{ maxWidth: '1280px', margin: 'auto' }}
         >
           <GridItem colSpan={3}>
-            <Box className="divider" mt={'20px'} />
-            <Dashboard />
-            three.jsで動くやつ
+            <Introduction />
           </GridItem>
 
           <GridItem colSpan={2}>
             <World />
           </GridItem>
         </Grid>
-      )}
-
+      }
     </Layout>
   );
 }
