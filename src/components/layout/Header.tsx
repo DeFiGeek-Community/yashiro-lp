@@ -2,7 +2,7 @@ import { HStack, VStack } from '@chakra-ui/layout';
 import { Grid, GridItem } from '@chakra-ui/react';
 import i18next from 'i18next';
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+//import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useActiveWeb3React } from '../../hooks/web3';
@@ -40,7 +40,7 @@ export default function Header() {
   const blockNumber = useBlockNumber();
   const [isMounting, setIsMounting] = useState(false);
 
-  const { t } = useTranslation();
+  //const { t } = useTranslation();
 
   useEffect(() => {
     if (!blockNumber) {
@@ -86,6 +86,7 @@ export default function Header() {
             <StyledPollingNumber breathe={isMounting}>
               {active && account && `block:${blockNumber}`}
             </StyledPollingNumber>
+            {/*
             <Link
               to="/tools/"
               style={{
@@ -96,6 +97,7 @@ export default function Header() {
             >
               {t('layout.tool')}
             </Link>
+            */}
           </VStack>
         </HStack>
       </GridItem>
