@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 //import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { useActiveWeb3React } from '../../hooks/web3';
+//import { useActiveWeb3React } from '../../hooks/web3';
 import { useBlockNumber } from '../../state/application/hooks';
 import Web3Status from '../WalletConnectButton';
 import SvgYamatoLogWithTitle from '../svgs/YamatoLogoWithTitle';
@@ -35,7 +35,7 @@ const changeLanguage = (i18next: any, lang: any) => {
 };
 
 export default function Header() {
-  const { active, account } = useActiveWeb3React();
+  //const { active, account } = useActiveWeb3React();
 
   const blockNumber = useBlockNumber();
   const [isMounting, setIsMounting] = useState(false);
@@ -83,9 +83,8 @@ export default function Header() {
           </LanguageButton>
           <Web3Status />
           <VStack>
-            <StyledPollingNumber breathe={isMounting}>
-              {active && account && `block:${blockNumber}`}
-            </StyledPollingNumber>
+            <StyledPollingNumber breathe={isMounting}></StyledPollingNumber>
+
             {/*
             <Link
               to="/tools/"

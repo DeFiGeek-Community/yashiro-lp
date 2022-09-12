@@ -2,7 +2,7 @@ import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
 import { useMemo } from 'react';
 import { Button as RebassButton } from 'rebass/styled-components';
 import styled from 'styled-components';
-import CJPYLogo from '../../components/svgs/CjpyLogo';
+//import CJPYLogo from '../../components/svgs/CjpyLogo';
 import { CHAIN_INFO } from '../../constants/chains';
 import { NetworkContextName } from '../../constants/misc';
 import useENSName from '../../hooks/ens/useENSName';
@@ -12,8 +12,8 @@ import {
   useAllTransactions,
 } from '../../state/transactions/hooks';
 import { TransactionDetails } from '../../state/transactions/reducer';
-import { useWalletState } from '../../state/wallet/hooks';
-import { formatPrice } from '../../utils/prices';
+//import { useWalletState } from '../../state/wallet/hooks';
+//import { formatPrice } from '../../utils/prices';
 import { shortenAddress } from '../../utils/web3';
 import { Text } from '../CommonItem';
 import Loader from '../Loader';
@@ -57,7 +57,7 @@ function Web3StatusInner() {
   const { account, chainId, error } = useWeb3React();
 
   const { ENSName } = useENSName(account ?? undefined);
-  const { cjpy } = useWalletState();
+  //const { cjpy } = useWalletState();
 
   const toggleWalletModal = useWalletModalToggle();
   const allTransactions = useAllTransactions();
@@ -110,7 +110,10 @@ function Web3StatusInner() {
                 {ENSName || shortenAddress(account)}
               </FlexText>
             )}
+            {/*
             <CJPYLogo width="35px" />
+            */}
+            {/*
             <FlexText
               style={{
                 fontSize: '3rem',
@@ -119,6 +122,7 @@ function Web3StatusInner() {
             >
               CJPY {formatPrice(cjpy, 'jpy').value}
             </FlexText>
+            */}
           </span>
         </WalletButton>
       </>

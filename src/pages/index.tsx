@@ -6,7 +6,7 @@ import Introduction from '../components/Introduction';
 //import Pledge from '../components/Pledge';
 //import Redemption from '../components/Redemption';
 
-import World from '../components/World';
+//import World from '../components/World';
 import Layout from '../components/layout';
 
 export default function Index() {
@@ -79,9 +79,7 @@ export default function Index() {
             <Introduction />
           </GridItem>
 
-          <GridItem colSpan={2}>
-            <World />
-          </GridItem>
+          <GridItem colSpan={2}>文章</GridItem>
         </Grid>
       }
     </Layout>
