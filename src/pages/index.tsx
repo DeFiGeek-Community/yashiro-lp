@@ -71,15 +71,16 @@ export default function Index() {
 
       {
         <Grid
-          templateColumns="repeat(5, 1fr)"
+          templateColumns="repeat(8, 1fr)"
           gap={8}
           style={{ maxWidth: '1280px', margin: 'auto' }}
         >
-          <GridItem colSpan={3}>
+          <GridItem colSpan={8}>
             <Introduction />
           </GridItem>
-
+          {/*}
           <GridItem colSpan={2}>文章</GridItem>
+      */}
         </Grid>
       }
     </Layout>
