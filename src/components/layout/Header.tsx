@@ -6,9 +6,12 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 //import { useActiveWeb3React } from '../../hooks/web3';
+
+import Logo from '../../assets/test/marimo_logo.png';
+
 import { useBlockNumber } from '../../state/application/hooks';
 import Web3Status from '../WalletConnectButton';
-import SvgYamatoLogWithTitle from '../svgs/YamatoLogoWithTitle';
+//import SvgYamatoLogWithTitle from '../svgs/YamatoLogoWithTitle';
 
 const StyledPollingNumber = styled.div<{
   breathe: boolean;
@@ -64,7 +67,7 @@ export default function Header() {
     >
       <GridItem rowSpan={1} colSpan={1}>
         <Link to="/">
-          <SvgYamatoLogWithTitle width={422} height={50} />
+          <img src={Logo} width={422} height={50}></img>
         </Link>
       </GridItem>
       <GridItem
