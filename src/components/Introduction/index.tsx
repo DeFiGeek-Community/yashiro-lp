@@ -1,3 +1,4 @@
+import App from './app';
 import First from './first';
 
 export default function Introduction() {
@@ -5,6 +6,8 @@ export default function Introduction() {
   return (
     <>
       <First></First>
+
+      <App></App>
     </>
   );
 }
